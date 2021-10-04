@@ -9,11 +9,13 @@
                 <a href="{{ route('dashboard') }}" class="mr-12 nav-link active">Tableau de bord</a>
             </div>
 
-            <div class="relative p-1 flex items-center justify-end w-1/4 ml-5 mr-4 sm:mr-0 sm:right-auto">
-                <a href="#" class="block relative">
+            <form method="POST" action="/logout" class="relative p-1 flex items-center justify-end w-1/4 ml-5 mr-4 sm:mr-0 sm:right-auto">
+                @method("DELETE")
+                @csrf
+                <button type="submit" class="block relative">
                     <ion-icon name="log-out-outline" class="text-3xl"></ion-icon>
-                </a>
-            </div>
+                </button>
+            </form>
         </div>
     </div>
 </header>
